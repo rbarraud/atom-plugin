@@ -4,11 +4,20 @@
 kite-signature {
   display: block;
   padding: @component-padding;
-  background: @app-background-color;
+
+  // background: @app-background-color;
+  background: @hover-background-color;
+  color: @text-color-highlight;
+  border: 1px solid @border-color;
+  border-radius: @component-border-radius;
+
   font-size: 1em;
   font-family: @font-family;
   max-width: 30em;
   min-width: 20em;
+  position: relative;
+  z-index: 10;
+  transform: translate(0, -100%);
 
   .kite-content;
 
