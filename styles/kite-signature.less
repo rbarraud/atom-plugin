@@ -1,6 +1,19 @@
 @import "variables";
 @import "content";
 
+autocomplete-suggestion-list.select-list.popover-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-list-scroller {
+  order: 1;
+}
+
+.suggestion-description {
+  order: 2;
+}
+
 kite-signature {
   display: block;
   padding: @component-padding;
@@ -9,6 +22,7 @@ kite-signature {
   font-family: @font-family;
   max-width: 30em;
   min-width: 20em;
+  order: 0;
 
   .kite-content;
 
