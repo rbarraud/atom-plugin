@@ -267,7 +267,8 @@ describe('NotificationsCenter', () => {
           expect(notification.getType()).toEqual('warning');
           expect(notification.getMessage())
           .toEqual('The Kite engine is not running');
-          expect(options.description).toEqual('You have multiple versions of Kite installed. Please launch your desired one.');
+          expect(options.description)
+          .toEqual('You have multiple versions of Kite installed. Please launch your desired one.');
 
           expect(options.buttons).toBeUndefined();
         });
@@ -372,7 +373,8 @@ describe('NotificationsCenter', () => {
           expect(notification.getType()).toEqual('warning');
           expect(notification.getMessage())
           .toEqual('The Kite engine is not running');
-          expect(options.description).toEqual('You have multiple versions of Kite installed. Please launch your desired one.');
+          expect(options.description)
+          .toEqual('You have multiple versions of Kite installed. Please launch your desired one.');
 
           expect(options.buttons).toBeUndefined();
         });
@@ -417,7 +419,8 @@ describe('NotificationsCenter', () => {
               const button = queryNotificationSelector(notificationElement, 'a.btn');
               click(button);
 
-              waitsFor('second notification', () => workspaceElement.querySelectorAll('atom-notification').length === 2);
+              waitsFor('second notification', () =>
+                workspaceElement.querySelectorAll('atom-notification').length === 2);
               runs(() => {
                 notificationElement = getNotificationElement();
                 notification = notificationElement.getModel();
@@ -447,7 +450,8 @@ describe('NotificationsCenter', () => {
               });
 
               it('displays another notification when it fails', () => {
-                waitsFor('third notification', () => workspaceElement.querySelectorAll('atom-notification').length === 3);
+                waitsFor('third notification', () =>
+                  workspaceElement.querySelectorAll('atom-notification').length === 3);
               });
             });
           });
@@ -468,7 +472,8 @@ describe('NotificationsCenter', () => {
               const button = queryNotificationSelectorAll(notificationElement, 'a.btn')[1];
               click(button);
 
-              waitsFor('second notification', () => workspaceElement.querySelectorAll('atom-notification').length === 2);
+              waitsFor('second notification', () =>
+                workspaceElement.querySelectorAll('atom-notification').length === 2);
               runs(() => {
                 notificationElement = getNotificationElement();
                 notification = notificationElement.getModel();
@@ -531,7 +536,8 @@ describe('NotificationsCenter', () => {
           expect(notification.getType()).toEqual('warning');
           expect(notification.getMessage())
           .toEqual('The Kite engine is not running');
-          expect(options.description).toEqual('You have multiple versions of Kite installed. Please launch your desired one.');
+          expect(options.description)
+          .toEqual('You have multiple versions of Kite installed. Please launch your desired one.');
 
           expect(options.buttons).toBeUndefined();
         });

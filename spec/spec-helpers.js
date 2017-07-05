@@ -495,7 +495,7 @@ function withKiteAuthenticated(routes, block) {
   }
 
   routes.push([
-    o => /^\/api\/account\/authenticated/.test(o.path),
+    o => /^\/clientapi\/user/.test(o.path),
     o => fakeResponse(200, 'authenticated'),
   ]);
 
@@ -508,7 +508,7 @@ function withKiteAuthenticated(routes, block) {
 
 function withKiteNotAuthenticated(block) {
   withKiteReachable([
-    [o => o.path === '/api/account/authenticated', o => fakeResponse(401)],
+    [o => o.path === '/clientapi/user', o => fakeResponse(401)],
   ], () => {
     describe(', not authenticated', () => {
       block();
