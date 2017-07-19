@@ -82,6 +82,11 @@
       "type": "boolean",
       "default": true
     },
+    "signatureAboveCompletions": {
+      "type": "boolean",
+      "default": false,
+      "description": "When enabled, the Kite signature panel will appear above completions in autocomplete-plus panel."
+    },
     "loggingLevel": {
       "type": "string",
       "default": "info",
